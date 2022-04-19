@@ -14,7 +14,7 @@ addTodoForm.addEventListener('submit', (e) => {
 })
 
 todoList.addEventListener('click', (e) => {
-  if (e.target.parentElement.tagName === 'LI') {
+  if ((e.target.parentElement.tagName === 'LI') && (e.target.tagName === 'BUTTON')) {
     e.target.parentElement.remove();
   }
 })
