@@ -3,18 +3,18 @@ const newTodo = document.querySelector('#new-todo');
 const todoList = document.querySelector('.todo-list');
 const deleteTodo = document.querySelector('.delete-button');
 
-
-
 addTodoForm.addEventListener('submit', (e) => {
   e.preventDefault();
   todoList.innerHTML += `
-    <div>
+    <li>
       <p>${newTodo.value}</p>
       <button class="delete-button">delete</button>
-    </div>`;
+    </li>`;
   newTodo.value = '';
 })
 
-deleteTodo.addEventListener('click', () => {
-  console.log(deleteTodo.parentElement.parentElement.innerHTML);
+todoList.addEventListener('click', (e) => {
+  if (e.target.parentElement.tagName === 'LI') {
+    e.target.parentElement.remove();
+  }
 })
