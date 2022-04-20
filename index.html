@@ -7,12 +7,16 @@
 </head>
 <body>
   <h1>Todo List</h1>
+  <form class="search-box">
+    <input type="text" name="" id="search" onkeydown="return (event.keyCode!=13);" autocomplete="off">
+  </form>
+  <h2>Add new todo</h2>
   <form class="todo-form">
     <input type="text" name="" id="new-todo">
   </form>
   <ul class="todo-list">
     <li>
-      <p>example todo</p>
+      <p class="todo-item">example todo</p>
       <button class="delete-button">delete</button>
     </li>
   </div>
